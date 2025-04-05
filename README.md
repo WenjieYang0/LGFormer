@@ -16,16 +16,16 @@ LGFormer integrates both local and global representations while incorporating a 
 ## Quick Start
 
 ### Input Format
-To quickly use LGFormer, your input data should have the shape **(B, 1, channel, sequence_length)**, where:
+To quickly use LGFormer, your input data should have the shape **(B, 1, channels, sequence_length)**, where:
 - **B**: Batch size
-- **channel**: Number of EEG electrode channels
+- **channels**: Number of EEG electrode channels
 - **sequence_length**: Number of temporal sample points
 
 ### Implementation
 **To use LGFormer, you only need to specify three parameters**:
-- **`in_channel`**: Number of EEG channels in your data
-- **`seq_len`**: Sequence length of your EEG recordings
-- **`num_classes`**: Number of classes in your classification task
+- **`in_channel`**: Number of EEG channels
+- **`seq_len`**:  Number of temporal sample points
+- **`num_classes`**: Number of classes
 - 
 For example:
 
