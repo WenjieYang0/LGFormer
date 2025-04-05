@@ -4,23 +4,25 @@ Official PyTorch implementation of **[LGFormer: Integrating Local and Global Rep
 
 ## Introduction
 
-LGFormer is a general-purpose convolutional-transformer model for Electroencephalography (EEG) decoding. The architecture consists of:
+LGFormer is a general-purpose convolutional neural network (CNN) - transformer model for Electroencephalography (EEG) decoding. The architecture consists of:
 - Temporal-Spatial Encoder (TSE)
 - Local-Enhanced Transformer (LET)
-- Classification head
+- Classifier
 
-The lightweight design efficiently combines local and global representations for fast training and accurate EEG signal decoding.
+![Overall architecture of LGFormer.](architecture_lgformer.png)
+
+LGFormer integrates both local and global representations while incorporating a lightweight design, enabling efficient training and decoding on EEG data.
 
 ## Quick Start
 
 ### Input Format
-Ensure your input data has the shape **(B, 1, channel, sequence_length)**, where:
+To quickly use LGFormer, your input data should have the shape **(B, 1, channel, sequence_length)**, where:
 - **B**: Batch size
 - **channel**: Number of EEG electrode channels
 - **sequence_length**: Number of temporal sample points
 
 ### Implementation
-To use LGFormer, specify your EEG decoding task parameters: number of channels (`in_channel`), sequence length (`seq_len`), and number of classes (`num_classes`):
+To use LGFormer, specify your EEG decoding task parameters: number of channels (`in_channel`), sequence length (`seq_len`), and number of classes (`num_classes`). For example:
 
 ```python
 from LGFormer import LGFormer
