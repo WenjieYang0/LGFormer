@@ -22,7 +22,12 @@ To quickly use LGFormer, your input data should have the shape **(B, 1, channel,
 - **sequence_length**: Number of temporal sample points
 
 ### Implementation
-To use LGFormer, specify your EEG decoding task parameters: number of channels (`in_channel`), sequence length (`seq_len`), and number of classes (`num_classes`). For example:
+**To use LGFormer, you only need to specify three parameters**:
+- **`in_channel`**: Number of EEG channels in your data
+- **`seq_len`**: Sequence length of your EEG recordings
+- **`num_classes`**: Number of classes in your classification task
+- 
+For example:
 
 ```python
 from LGFormer import LGFormer
@@ -44,7 +49,7 @@ Configurations used in the paper:
 | Cognitive workload | 28 | 400 | 3 | `LGFormer(in_channel=28, seq_len=400, num_classes=3)` |
 | ERN | 56 | 280 | 2 | `LGFormer(in_channel=56, seq_len=280, num_classes=2)` |
 
-The implementation includes default hyperparameters from the paper, and we alse provide interfaces that can be quickly adjusted for your specific task requirements.
+Feel free to try LGFormer on your own EEG tasks. The implementation includes default hyperparameters from the paper, and we alse provide interfaces that can be quickly adjusted for your specific task requirements.
 
 ## Citation
 If you find our paper/code useful, please consider citing our work:
@@ -56,4 +61,3 @@ If you find our paper/code useful, please consider citing our work:
   year={2025}
 }
 ```
-
