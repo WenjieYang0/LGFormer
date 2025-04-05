@@ -1,6 +1,6 @@
 # LGFormer
 
-Official PyTorch implementation of **[LGFormer: Integrating Local and Global Representations for EEG Decoding](https://iopscience.iop.org/article/10.1088/1741-2552/adc5a3)**.
+Official PyTorch implementation of **[LGFormer: Integrating Local and Global Representations for EEG Decoding](https://iopscience.iop.org/article/10.1088/1741-2552/adc5a3)**, published in Journal of Neural Engineering (JNE), DOI: 10.1088/1741-2552/adc5a3.
 
 ## Introduction
 
@@ -49,7 +49,7 @@ Configurations used in the paper:
 | Cognitive workload | 28 | 400 | 3 | `LGFormer(in_channel=28, seq_len=400, num_classes=3)` |
 | ERN | 56 | 280 | 2 | `LGFormer(in_channel=56, seq_len=280, num_classes=2)` |
 
-Feel free to try LGFormer on your own EEG tasks. The implementation includes default hyperparameters from the paper, and we alse provide interfaces that can be quickly adjusted for your specific task requirements.
+The implementation includes default hyperparameters in the paper, and we alse provide interfaces that can be quickly adjusted for your specific task requirements.
 
 ## Citation
 If you find our paper/code useful, please consider citing our work:
